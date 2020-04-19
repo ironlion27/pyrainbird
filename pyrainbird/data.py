@@ -97,7 +97,7 @@ class States(object):
         while rest:
             current = int(rest[:2], 16)
             rest = rest[2:]
-            for i in range(0, 8):
+            for i in range(0, 16):
                 self.states = self.states + (bool((1 << i) & current),)
 
     def active(self, number):
